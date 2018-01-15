@@ -1,0 +1,27 @@
+https://guides.github.com/activities/hello-world/
+leoliyu1
+
+-------------
+psql 进入库命令行操作
+
+\l	列出数据库
+\du 	列出用户
+\q  退出
+\x 详细信息 
+
+导出到线下文件
+
+pg_dump --host hostname --port port --username username -t tablename -d dbname >/home/jihite/table.sql 
+
+把线下文件导入到数据库
+
+psql -h 10.125.7.68 -p 5432 -d postgres -U postgres -W postgres -f 2.sql
+
+~~~~
+-bash-4.2$ pg_dump ambari > ambari24.sql
+~~~~~
+
+
+Create the database backups.~~~~~~~~~~~~~~
+pg_dump -U $AMBARI-SERVER USERNAME ambari > ambari.sql Password: $AMBARI-SERVER PASSWORD
+pg_dump -U $MAPRED USERNAME ambarirca > ambarirca.sql Password: $MAPRED PASSWORD
